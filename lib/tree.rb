@@ -1,3 +1,4 @@
+require_relative 'node.rb'
 class Tree
   def initialize(arr)
     @arr = arr
@@ -18,7 +19,7 @@ class Tree
   end
   def insert(value,root=@root)
     if root.nil?
-      return node.new(value)
+      return Node.new(value)
     else
       if value > root.data
         root.right = insert(value,root.right)
